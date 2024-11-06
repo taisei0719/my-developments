@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanitter</title>
+  <link rel="stylesheet" href="style.css?15">
+</head>
+
+<body>
+  <div class="container">
+    <div id="app" @scroll="handleScroll">
+      <div class="row">
+        <h3>最新ツイート</h3>
+        <span class="error"> {{ result_message }} </span>
+        <input v-model="message" v-bind:disabled="is_input_disabled" autocomplete="off" placeholder="いまどうしてる？">
+        <div class="row-right-none">
+          <button v-on:click="sendTweet" v-bind:disabled="is_button_disabled">
+         ツイートする</button>
+        </div>
+      </div>
+      <div class="row" v-show="is_new_tweet_show">
+        <div class="new_tweets" v-on:click="updateTweets">{{ num_pending_tweets }}件のツイートを表示</div>
+      </div>
+      <div class="row" v-for="item in tweets">
+        <div class="header">{{formatTimestamp(item.ts)}}</div>
+        <div class="content">{{item.text}}</div>
+      </div>
+    </div><!-- id="app"-->
+  </div><!-- class="container"-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/6b89b0e006.js" crossorigin="anonymous"></script> <!-- Font Awesome Script -->
+  <script src="wanitter.js?1"></script>
+</body>
+</html>

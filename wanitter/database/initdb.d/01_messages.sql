@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS messages;
+
+CREATE TABLE messages(
+       id INT NOT NULL AUTO_INCREMENT,
+       text VARCHAR(512) NOT NULL,
+       ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (id)
+);
+
+

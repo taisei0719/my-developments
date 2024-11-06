@@ -1,0 +1,124 @@
+.container{
+    text-align: center;
+    width: 600px;
+    margin: 0px auto;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden; /* 水平方向のスクロールを無効化 */
+    height: 100vh;
+}
+
+#app{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;/* 幅を100%に設定して横幅を超えないように */
+}
+
+h3{
+    margin: 10px;
+    padding: 0px;
+}
+
+.row{
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-color: #808080;
+    border-width: 1px;
+}
+
+.row-right{
+    text-align: right;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-color: #808080;
+    border-width: 1px;
+}
+
+.row-right-none{
+    text-align: right;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-style: none;
+}
+
+.header{
+    text-align: left;
+    width: 580px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 80%;
+    color: #808080;
+}
+
+.content{/*ツイートの内容*/
+    text-align: left;
+    width: 580px;
+    margin: 10px;
+    padding: 0px;
+    font-size: 90%;
+}
+
+.error{
+    text-align: left;
+    width: 580px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-right: 10px;
+    font-size: 80%;
+    color: #FF0000;
+    margin-top: 0px;
+}
+
+.new_tweets{
+    text-align: center;
+    width: 580px;
+    padding: 10px;
+    font-size: 80%;
+    color: #0000FF;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 0px;
+    border-style: none;
+    min-width: 550px;
+    font-size: 100%;
+}
+
+button{
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #0000FF;
+    font-size: 100%;
+    color: white;
+    padding: 5px;
+    border:none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:disabled{
+    background-color: #CCCCFF;
+}
+
+
